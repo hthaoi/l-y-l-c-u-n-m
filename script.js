@@ -31,3 +31,42 @@ function resetGame() {
     initializeGame();
 }
 initializeGame();
+function saveToHistory(prize) {
+    let history = JSON.parse(localStorage.getItem("prizeHistory")) || [];
+    let playerName = prompt("Nhập tên của bạn:"); // Yêu cầu nhập tên
+    if (!playerName) return; // Nếu không nhập tên, không lưu lịch sử
+
+    history.push({ name: playerName, prize: prize });
+
+    localStorage.setItem("prizeHistory", JSON.stringify(history));
+}
+
+function showHistory() {
+    let history = JSON.parse(localStorage.getItem("prizeHistory")) || [];
+    let historyBox = document.getElementById("history");
+
+    if (history.length === 0) {
+        historyBox.innerHTML = "<p>Chưa có ai bốc thăm.</p>";
+        return;
+    }
+    let historyHTML = "<h3>Lịch sử bốc thăm:</h3><ul>";
+    history.forEach(entry => {
+        historyHTML += `<li>${entry.name} đã nhận được ${entry.prize}k</li>`;
+    });
+    historyHTML += "</ul>";
+
+    historyBox.innerHTML = historyHTML;
+}
+
+function selectBox(box) {
+    if (box.textContent !== "") return;
+
+    const prize = boxPrizes[Array.from(box.parentElement.children).indexOf(box)];
+    
+    box.textContent = `${prize}k`;
+    
+    document.getElementById("result").textContent = `Bạn nhận được: ${prize}k!`;
+
+    saveToHistory(prize); 
+}
+
