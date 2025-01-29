@@ -3,18 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bốc Thăm Lì Xì Lấy Lộc</title>
+    <title>Trò Chơi Lì Xì Đầu Năm</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Bốc Thăm Lì Xì</h1>
-        <p>xin cái tên (or nickname):</p>
+        <h1>Bốc thăm lấy lộc</h1>
+        <p>Chọn một ô và xem bà nhận được bao nhiêu tiền!</p>
         
-        <input type="text" id="name" placeholder="Nhập tên ở đây nè" />
-        <button onclick="drawPrize()">Bốc Thui</button>
-        
+        <div class="grid">
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+            <div class="box" onclick="selectBox(this)"></div>
+        </div>
+
         <div id="result" class="result"></div>
+        <button onclick="resetGame()">Chơi Lại</button>
     </div>
 
     <script src="script.js"></script>
